@@ -1,5 +1,4 @@
-import videoRouter from "./routers/videoRouter";
-
+//Global
 const HOME ="/";
 const JOIN ="/join";
 const LOGIN="/login";
@@ -11,7 +10,7 @@ const SEARCH ="/search";
 const USERS="/users";
 const USER_DETAIL="/:id";
 const EDIT_PROFILE="/edit-profile";
-const CHNGE_PASSWORD="/change-password";
+const CHANGE_PASSWORD="/change-password";
 
 //videos
 
@@ -30,7 +29,7 @@ const routes = {
     users:USERS,
     userDetail:USER_DETAIL,
     editProfile:EDIT_PROFILE,
-    changeProfile:CHNGE_PASSWORD,
+    changePassword:CHANGE_PASSWORD,
     videos:VIDEOS,
     upload:UPLOAD,
     videoDetail:VIDEO_DETAIL,
