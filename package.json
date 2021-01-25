@@ -4,6 +4,21 @@
   "description": "youtube clone with Vanilla and nodejs",
   "author": "minseop Kim",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon --exec babel-node init.js --delay 2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "core-js": "^3.8.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
