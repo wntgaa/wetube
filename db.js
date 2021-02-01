@@ -1,52 +1,19 @@
-export const videoin = [
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+
+mongoose.connect(
+  process.env.MONGO_URL,
   {
-    id: 324393,
-    title: "Video awesome",
-    description: "This is something I love",
-    views: 24,
-    videoFile:
-    "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-  creator: {
-    id: 121212,
-    name: "Nicolas",
-    email: "nico@las.com"
+    useNewUrlParser: true,
+    useFindAndModify: false
   }
-},
-{
-  id: 1212121,
-  title: "Video super",
-  description: "This is something I love",
-  views: 24,
-  videoFile:
-  "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-creator: {
-  id: 121212,
-  name: "Nicolas",
-  email: "nico@las.com"
-}
-},
-{
-id: 55555,
-title: "Video nice",
-description: "This is something I love",
-views: 24,
-videoFile:
-      "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
-    creator: {
-      id: 121212,
-      name: "Nicolas",
-      email: "nico@las.com"
-    }
-  },
-  {
-    id: 11111,
-    title: "Video perfect",
-    description: "This is something I love",
-    views: 24,
-    creator: {
-      id: 121212,
-      name: "Nicolas",
-      email: "nico@las.com"
-    }
-  }
-];
+);
+
+const db = mongoose.connection;
+
+const handleOpen = () => console.log("DB에 연결되었습니다")
+const handleError = () => console.log("DB연결에 에러가 발생했습니다!")
+
+db.once("open", handleOpen);
+db.on("error",handleError);

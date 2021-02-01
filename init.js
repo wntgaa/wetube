@@ -1,6 +1,9 @@
+import "./db";
 import app from "./app";
-
-const PORT =4000;
+import dotenv from "dotenv";
+dotenv.config();
+import "./models/Video";
+const PORT =process.env.PORT || 4000;
 const handleListening = ()=>
     console.log(`localhost:${PORT}에서 실행중입니다`);
 
