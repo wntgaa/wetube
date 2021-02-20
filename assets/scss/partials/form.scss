@@ -1,0 +1,57 @@
+.form-container {
+    width: 100%;
+    display: flex;
+    font-family: 'Sriracha', cursive;
+    color: $mint;
+    font-weight:bold;
+    font-size: 25px;
+    text-shadow: -1px 0 , 0 1px #D5D6D7, 1px 0 #D5D6D7, 0 -1px #D5D6D7;
+    flex-direction: column;
+    align-items: center;
+    form {
+      width: 100%;
+      max-width: 350px;
+      margin-top: 40px;
+      input:not([type="file"]),
+      .fileUpload {
+        display: block;
+        width: 100%;
+        font-family: 'Sriracha', cursive;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 17px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+      textarea {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        margin-bottom: 25px;
+      }
+      input[type="submit"] {
+        background-color: $magenta;
+        font-family: 'Sriracha', cursive;
+        font-size: 25px;
+        text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        color: $white;
+        margin-bottom: 20px;
+      }
+      a {
+        max-width: 350px;
+        width: 100%;
+      }
+      .fileUpload {
+        label {
+          font-weight: 300;
+          margin-right: 10px;
+        }
+      }
+      input[type="submit"]:hover{
+        background-color: rgb(201, 201, 201);
+        color: whitesmoke;
+        text-shadow: -1px 0 $mint, 0 1px $mint, 1px 0 $mint, 0 -1px $mint;
+      }
+    }
+  }

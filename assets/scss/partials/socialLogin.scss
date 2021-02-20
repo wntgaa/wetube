@@ -1,0 +1,55 @@
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    button {
+      width: 100%;
+      max-width: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      span {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    }
+    .social-login__github {
+      background-color: $yellow;
+      color: $white;
+      align-items: center;
+      text-shadow: -1px 0 $mint, 0 1px $mint, 1px 0 $mint, 0 -1px $mint;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      font-family: 'Sriracha', cursive;
+      border:0;
+      outline:0;
+      font-size: 20px;
+      width: 100%;
+      max-width: 350px;
+      
+    }
+    .social-login__github:hover{
+      background-color: rgb(252, 212, 185);
+    }
+
+    .social-login__facebook {
+      background-color: rgb(202, 202, 255);
+      color: $white;
+      align-items: center;
+      border:0;
+      outline:0;
+      text-shadow: -1px 0 $mint, 0 1px $mint, 1px 0 $mint, 0 -1px $mint;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      font-family: 'Sriracha', cursive;
+      font-size: 20px;
+      width: 100%;
+      max-width: 350px;
+    }
+    .social-login__facebook:hover{
+      background-color: rgb(185, 252, 185);
+    }
+
+  }
